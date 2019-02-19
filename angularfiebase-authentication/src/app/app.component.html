@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" href="/">Post Your Blog</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#" routerLink="/home-page">Home</a>
+      <a class="nav-item nav-link" href="#" routerLink="/sign-up">Create User</a>
+      <a class="nav-item nav-link" href="#" routerLink="/user-post">User Post</a>
+      <a class="nav-item nav-link" href="#" routerLink="/post-blog">Post Blog</a>
+      <button *ngIf="authService.isLoggedIn !== false" mat-mini-fab class="btn btn-sm btn-danger" (click)="authService.SignOut()"><i class="material-icons">lock</i></button>
+          
+    </div>
+  </div>
+   
+</nav>
+<!-- <div class="jumbotron"> -->
+    <div class="container">
+        
+                <alert></alert>
+                <router-outlet></router-outlet>
+         
+    </div>
+<!-- </div> -->
+
+<nav class="navbar navbar-dark bg-dark mt-5 fixed-bottom">
+  <div class="navbar-expand m-auto navbar-text">
+    Made with <i class="fa fa-heart"></i> by <a target="_blank" href="https://twitter.com/vipin95379845">Vipin Pandey</a>
+  </div>
+</nav>
